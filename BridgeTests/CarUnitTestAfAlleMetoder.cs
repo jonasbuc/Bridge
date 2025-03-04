@@ -56,5 +56,19 @@ namespace CarUnitTestAfAlleMetoder
             // Assert
             Assert.AreEqual("ABC1234", car.Licenseplate);
         }
+
+        [TestMethod()]
+        public void PriceWithBrobizzTest()
+        {
+            // Arrange
+            var car = new Car { IsBrobizzUsed = true };
+
+            // Act
+            var price = car.Price();
+
+            // Assert
+            Assert.AreEqual(207, price, 0.01); // 10% discount on 230 is 207
+        }
     }
 }
+

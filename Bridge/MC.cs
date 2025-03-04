@@ -6,12 +6,22 @@
     public class MC : Vehicle
     {
         /// <summary>
+        /// Angiver, om en Brobizz bruges.
+        /// </summary>
+        public bool IsBrobizzUsed { get; set; }
+
+        /// <summary>
         /// Returnerer prisen på motorcyklen.
         /// </summary>
-        /// <returns>Prisen på motorcyklen, som er fastsat til 120.</returns>
+        /// <returns>Prisen på motorcyklen, som er fastsat til 120, med en 10% rabat, hvis en Brobizz bruges.</returns>
         public override double Price()
         {
-            return 120;
+            double price = 120;
+            if (IsBrobizzUsed)
+            {
+                price *= 0.9; // Apply 10% discount
+            }
+            return price;
         }
 
         /// <summary>

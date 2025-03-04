@@ -6,12 +6,22 @@
     public class Car : Vehicle
     {
         /// <summary>
+        /// Angiver, om en Brobizz bruges.
+        /// </summary>
+        public bool IsBrobizzUsed { get; set; }
+
+        /// <summary>
         /// Returnerer prisen på bilen.
         /// </summary>
-        /// <returns>Prisen på bilen, som er fastsat til 230.</returns>
+        /// <returns>Prisen på bilen, som er fastsat til 230, med en 10% rabat, hvis en Brobizz bruges.</returns>
         public override double Price()
         {
-            return 230;
+            double price = 230;
+            if (IsBrobizzUsed)
+            {
+                price *= 0.9; // Giver 10% discount
+            }
+            return price;
         }
 
         /// <summary>
@@ -24,3 +34,4 @@
         }
     }
 }
+
