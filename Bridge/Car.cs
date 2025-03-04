@@ -13,14 +13,23 @@
         /// <summary>
         /// Returnerer prisen på bilen.
         /// </summary>
-        /// <returns>Prisen på bilen, som er fastsat til 230, med en 10% rabat, hvis en Brobizz bruges.</returns>
+        /// <returns>Prisen på bilen, som er fastsat til 230, med en 15% rabat, hvis det er weekend, og en yderligere 10% rabat, hvis en Brobizz bruges.</returns>
         public override double Price()
         {
             double price = 230;
+
+            // Apply weekend discount
+            if (Date.DayOfWeek == DayOfWeek.Saturday || Date.DayOfWeek == DayOfWeek.Sunday)
+            {
+                price *= 0.85; // Apply 15% discount
+            }
+
+            // Apply Brobizz discount
             if (IsBrobizzUsed)
             {
-                price *= 0.9; // Giver 10% discount
+                price *= 0.9; // Apply 10% discount
             }
+
             return price;
         }
 
@@ -34,4 +43,3 @@
         }
     }
 }
-

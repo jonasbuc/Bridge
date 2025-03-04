@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bridge</name>
+    </assembly>
+    <members>
+        <member name="T:Bridge.Car">
+            <summary>
+            Repræsenterer en bil.
+            </summary>
+        </member>
+        <member name="P:Bridge.Car.IsBrobizzUsed">
+            <summary>
+            Angiver, om en Brobizz bruges.
+            </summary>
+        </member>
+        <member name="M:Bridge.Car.Price">
+            <summary>
+            Returnerer prisen på bilen.
+            </summary>
+            <returns>Prisen på bilen, som er fastsat til 230, med en 10% rabat, hvis en Brobizz bruges.</returns>
+        </member>
+        <member name="M:Bridge.Car.VehicleType">
+            <summary>
+            Returnerer køretøjstypen.
+            </summary>
+            <returns>En streng, der repræsenterer køretøjstypen, som er "Car".</returns>
+        </member>
+        <member name="T:Bridge.MC">
+            <summary>
+            Repræsenterer en motorcykel.
+            </summary>
+        </member>
+        <member name="P:Bridge.MC.IsBrobizzUsed">
+            <summary>
+            Angiver, om en Brobizz bruges.
+            </summary>
+        </member>
+        <member name="M:Bridge.MC.Price">
+            <summary>
+            Returnerer prisen på motorcyklen.
+            </summary>
+            <returns>Prisen på motorcyklen, som er fastsat til 120, med en 10% rabat, hvis en Brobizz bruges.</returns>
+        </member>
+        <member name="M:Bridge.MC.VehicleType">
+            <summary>
+            Returnerer køretøjstypen.
+            </summary>
+            <returns>En streng, der repræsenterer køretøjstypen, som er "MC".</returns>
+        </member>
+        <member name="T:Bridge.Vehicle">
+            <summary>
+            Repræsenterer et køretøj med en nummerplade og en dato.
+            </summary>
+        </member>
+        <member name="P:Bridge.Vehicle.Licenseplate">
+            <summary>
+            Får eller sætter køretøjets nummerplade.
+            </summary>
+            <exception cref="T:System.ArgumentException">Kastes, hvis nummerpladen er længere end 7 tegn.</exception>
+        </member>
+        <member name="P:Bridge.Vehicle.Date">
+            <summary>
+            Får eller sætter køretøjets dato.
+            </summary>
+        </member>
+        <member name="M:Bridge.Vehicle.Price">
+            <summary>
+            Returnerer prisen på køretøjet.
+            </summary>
+            <returns>Prisen på køretøjet.</returns>
+        </member>
+        <member name="M:Bridge.Vehicle.VehicleType">
+            <summary>
+            Returnerer køretøjstypen.
+            </summary>
+            <returns>En streng, der repræsenterer køretøjstypen.</returns>
+        </member>
+    </members>
+</doc>

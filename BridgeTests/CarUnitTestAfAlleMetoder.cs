@@ -11,7 +11,7 @@ namespace CarUnitTestAfAlleMetoder
         public void PriceTest()
         {
             // Arrange
-            var car = new Car();
+            var car = new Car { Date = new DateTime(2025, 3, 4) }; // A weekday
 
             // Act
             var price = car.Price();
@@ -61,7 +61,7 @@ namespace CarUnitTestAfAlleMetoder
         public void PriceWithBrobizzTest()
         {
             // Arrange
-            var car = new Car { IsBrobizzUsed = true };
+            var car = new Car { IsBrobizzUsed = true, Date = new DateTime(2025, 3, 4) }; // A weekday
 
             // Act
             var price = car.Price();
@@ -69,6 +69,31 @@ namespace CarUnitTestAfAlleMetoder
             // Assert
             Assert.AreEqual(207, price, 0.01); // 10% discount on 230 is 207
         }
+
+        [TestMethod()]
+        public void PriceWithWeekendDiscountTest()
+        {
+            // Arrange
+            var car = new Car { Date = new DateTime(2025, 3, 8) }; // A Saturday
+
+            // Act
+            var price = car.Price();
+
+            // Assert
+            Assert.AreEqual(195.5, price, 0.01); // 15% discount on 230 is 195.5
+        }
+
+        [TestMethod()]
+        public void PriceWithWeekendAndBrobizzDiscountTest()
+        {
+            // Arrange
+            var car = new Car { IsBrobizzUsed = true, Date = new DateTime(2025, 3, 8) }; // A Saturday
+
+            // Act
+            var price = car.Price();
+
+            // Assert
+            Assert.AreEqual(175.95, price, 0.01); // 15% discount on 230 is 195.5, then 10% discount on 195.5 is 175.95
+        }
     }
 }
-
