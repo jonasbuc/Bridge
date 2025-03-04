@@ -32,5 +32,29 @@ namespace CarUnitTestAfAlleMetoder
             // Assert
             Assert.AreEqual("Car", vehicleType);
         }
+
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentException))]
+        public void LicenseplateTooLongTest()
+        {
+            // Arrange
+            var car = new Car();
+
+            // Act
+            car.Licenseplate = "ABCDEFGH"; // 8 characters, should throw exception
+        }
+
+        [TestMethod()]
+        public void LicenseplateValidTest()
+        {
+            // Arrange
+            var car = new Car();
+
+            // Act
+            car.Licenseplate = "ABC1234"; // 7 characters, should be valid
+
+            // Assert
+            Assert.AreEqual("ABC1234", car.Licenseplate);
+        }
     }
 }

@@ -5,10 +5,24 @@
     /// </summary>
     public abstract class Vehicle
     {
+        private string licenseplate;
+
         /// <summary>
         /// Får eller sætter køretøjets nummerplade.
         /// </summary>
-        public string Licenseplate { get; set; }
+        /// <exception cref="ArgumentException">Kastes, hvis nummerpladen er længere end 7 tegn.</exception>
+        public string Licenseplate
+        {
+            get => licenseplate;
+            set
+            {
+                if (value.Length > 7)
+                {
+                    throw new ArgumentException("Nummerpladen må ikke være længere end 7 tegn.");
+                }
+                licenseplate = value;
+            }
+        }
 
         /// <summary>
         /// Får eller sætter køretøjets dato.
