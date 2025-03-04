@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35825.156 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridge", "Bridge\Bridge.csproj", "{34F47782-38A9-4402-B34F-0C697CD0D104}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BridgeTests", "BridgeTests\BridgeTests.csproj", "{16ED75CA-4D4B-4DA5-84D4-CAB98CA5AB5B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{34F47782-38A9-4402-B34F-0C697CD0D104}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34F47782-38A9-4402-B34F-0C697CD0D104}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34F47782-38A9-4402-B34F-0C697CD0D104}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16ED75CA-4D4B-4DA5-84D4-CAB98CA5AB5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16ED75CA-4D4B-4DA5-84D4-CAB98CA5AB5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16ED75CA-4D4B-4DA5-84D4-CAB98CA5AB5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16ED75CA-4D4B-4DA5-84D4-CAB98CA5AB5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
