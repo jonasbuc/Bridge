@@ -1,25 +1,15 @@
 ﻿namespace Bridge
 {
     /// <summary>
-    /// Repræsenterer en bil med en nummerplade og en dato.
+    /// Repræsenterer en bil.
     /// </summary>
-    public class Car
+    public class Car : Vehicle
     {
-        /// <summary>
-        /// Får eller sætter bilens nummerplade.
-        /// </summary>
-        public string Licenseplate;
-
-        /// <summary>
-        /// Får eller sætter bilens dato.
-        /// </summary>
-        public DateTime Date;
-
         /// <summary>
         /// Returnerer prisen på bilen.
         /// </summary>
         /// <returns>Prisen på bilen, som er fastsat til 230.</returns>
-        public double Price()
+        public override double Price()
         {
             return 230;
         }
@@ -28,7 +18,7 @@
         /// Returnerer køretøjstypen.
         /// </summary>
         /// <returns>En streng, der repræsenterer køretøjstypen, som er "Car".</returns>
-        public string VehicleType()
+        public override string VehicleType()
         {
             return "Car";
         }

@@ -27,7 +27,7 @@ namespace MCUnitTestAfAlleMetoder
             var mC = new MC();
 
             // Act
-            var vehicleType = mC.vihicleType();
+            var vehicleType = mC.VehicleType();
 
             // Assert
             Assert.AreEqual("MC", vehicleType);

@@ -1,31 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Bridge
+﻿namespace Bridge
 {
     /// <summary>
-    /// Repræsenterer en motorcykel med en nummerplade og en dato.
+    /// Repræsenterer en motorcykel.
     /// </summary>
-    public class MC
+    public class MC : Vehicle
     {
-        /// <summary>
-        /// Får eller sætter motorcyklens nummerplade.
-        /// </summary>
-        public string Licenseplate;
-
-        /// <summary>
-        /// Får eller sætter motorcyklens dato.
-        /// </summary>
-        public DateTime date;
-
         /// <summary>
         /// Returnerer prisen på motorcyklen.
         /// </summary>
         /// <returns>Prisen på motorcyklen, som er fastsat til 120.</returns>
-        public double Price()
+        public override double Price()
         {
             return 120;
         }
@@ -34,7 +18,7 @@ namespace Bridge
         /// Returnerer køretøjstypen.
         /// </summary>
         /// <returns>En streng, der repræsenterer køretøjstypen, som er "MC".</returns>
-        public string vihicleType()
+        public override string VehicleType()
         {
             return "MC";
         }
